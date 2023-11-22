@@ -1,19 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/rendering.dart';
 import '../header.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: TelaAlunos(),
-    );
-  }
-}
+import 'student_list.dart';
 
 class TelaAlunos extends StatelessWidget {
   @override
@@ -30,7 +18,7 @@ class TelaAlunos extends StatelessWidget {
               child: Card(
                 elevation: 5,
                 child: Container(
-                  height: 500,
+                  height: MediaQuery.of(context).size.height * 0.8,
                   decoration: BoxDecoration(
                       color: Color(0xFFFFFFFF),
                       borderRadius: BorderRadius.circular(8)),
@@ -84,7 +72,11 @@ class TelaAlunos extends StatelessWidget {
                           ],
                         ),
                       ),
-                      //Título e lista de alunos
+                      TabelaTitulo(),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.6,
+                          child:
+                              TabelaAlunos(listaDadosAlunos: listaDadosAlunos)),
                     ],
                   ),
                 ),
