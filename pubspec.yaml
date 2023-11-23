@@ -17,3 +17,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/performance_logo.png
+    - assets/images/iconeAlunos.png
+    - assets/images/iconeFinanceiro.png
+    - assets/images/iconeFuncionario.png
+    - assets/images/exemploLogo.png

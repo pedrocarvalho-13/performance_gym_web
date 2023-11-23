@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'login_register/index_login_register.dart';
+import 'student_table/alunos_table.dart';
+
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      home: TelaAlunos(),
     );
   }
 }
