@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:performance_gym_web/development.dart';
-import 'package:performance_gym_web/student_table/student_list.dart';
+import 'package:performance_gym_web/functionary_table/funcionarios_table.dart';
 
 import 'header.dart';
 import 'student_table/alunos_table.dart';
@@ -97,7 +97,7 @@ class Home extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => TelaAlunos(),
+                                  builder: (context) => TelaFuncionario(),
                                 ),
                               );
                             },
