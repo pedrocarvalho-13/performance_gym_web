@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:performance_gym_web/register_forms/form_funcionario.dart';
 import '../header.dart';
 import 'funcionarios_list.dart';
 
@@ -41,7 +42,12 @@ class TelaFuncionario extends StatelessWidget {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
-                                    // Ação para adicionar aluno
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TelaCadastroFuncionario(titulo: 'Cadastro de Funcionário ',),
+                                      ),
+                                    );
                                   },
                                   style: ElevatedButton.styleFrom(
                                     primary: Color(0xFFFF5722),
@@ -57,7 +63,12 @@ class TelaFuncionario extends StatelessWidget {
                                 SizedBox(width: 8),
                                 OutlinedButton(
                                   onPressed: () {
-                                    // Ação para editar aluno
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TelaCadastroFuncionario(titulo: 'Edição de Funcionário',),
+                                      ),
+                                    );
                                   },
                                   style: OutlinedButton.styleFrom(
                                     primary: Color(0xFFFF5722),

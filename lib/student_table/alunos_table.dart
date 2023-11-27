@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:performance_gym_web/development.dart';
 import '../header.dart';
+import '../register_forms/form_aluno.dart';
 import 'student_list.dart';
 
 class TelaAlunos extends StatelessWidget {
@@ -42,6 +44,12 @@ class TelaAlunos extends StatelessWidget {
                                 ElevatedButton(
                                   onPressed: () {
                                     // Ação para adicionar aluno
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TelaCadastroAlunos(titulo: 'Cadastro de Aluno',),
+                                      ),
+                                    );
                                   },
                                   style: ElevatedButton.styleFrom(
                                     primary: Color(0xFFFF5722),
@@ -57,7 +65,12 @@ class TelaAlunos extends StatelessWidget {
                                 SizedBox(width: 8),
                                 OutlinedButton(
                                   onPressed: () {
-                                    // Ação para editar aluno
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TelaCadastroAlunos(titulo: 'Edição de Aluno ',),
+                                      ),
+                                    );
                                   },
                                   style: OutlinedButton.styleFrom(
                                     primary: Color(0xFFFF5722),
@@ -140,5 +153,3 @@ class TelaAlunos extends StatelessWidget {
     );
   }
 }
-
-
